@@ -26,10 +26,13 @@ jobs:
         run: composer install --no-progress --prefer-dist --optimize-autoloader
 
       - name: Run PHP Unit
+        if: always()
         run: ./vendor/bin/phpunit
 
       - name: Run Psalm
+        if: always()
         run: ./vendor/bin/psalm
 
       - name: Run PHPCS
+        if: always()
         run: ./vendor/bin/phpcs
