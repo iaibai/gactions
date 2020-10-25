@@ -35,4 +35,4 @@ jobs:
 
       - name: Run PHPCS
         if: always()
-        run: ./vendor/bin/phpcs
+        run: ./vendor/bin/phpcs --standard=PSR2 app
